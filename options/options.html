@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnsariVPN Settings</title>
+    <link rel="stylesheet" href="options.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>AnsariVPN Settings</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="settings-group">
+                <h2>General</h2>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label for="auto-connect">Auto-connect on startup</label>
+                        <p class="description">Automatically connect to the last used location when Chrome starts.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="auto-connect">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label for="show-notifications">Show notifications</label>
+                        <p class="description">Show desktop notifications when connecting or disconnecting.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="show-notifications">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="status-message" id="status-message">Settings saved</div>
+        </main>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>

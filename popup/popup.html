@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnsariVPN</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>AnsariVPN</span>
+            </div>
+            <div class="status-badge" id="status-badge">
+                <span class="dot"></span>
+                <span class="text">Protected</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="connection-display">
+                <div class="timer" id="timer">00:00:00</div>
+                <div class="ip-address" id="ip-address">Checking IP...</div>
+            </div>
+
+            <div class="control-center">
+                <button class="power-btn" id="power-btn" aria-label="Connect/Disconnect">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.36 6.64001C19.6184 7.8988 20.4753 9.50246 20.8223 11.2482C21.1693 12.994 20.9909 14.8034 20.3096 16.4478C19.6284 18.0921 18.4748 19.4976 16.9948 20.4864C15.5147 21.4752 13.7749 22.0029 11.995 21.9999C10.2151 21.9969 8.47758 21.4634 7.00086 20.4697C5.52415 19.476 4.37412 18.0667 3.69785 16.4198C3.02158 14.7729 2.84928 12.963 3.20299 11.2179C3.55669 9.47284 4.42065 7.87168 5.69001 6.62001"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12 2V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="connection-status" id="connection-status">Disconnected</div>
+            </div>
+
+            <div class="location-selector">
+                <label for="country-select">Select Location</label>
+                <div class="select-wrapper">
+                    <select id="country-select">
+                        <option value="" disabled selected>Choose a country</option>
+                        <!-- Options will be populated by JS -->
+                    </select>
+                    <div class="select-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <a href="#" class="settings-link">Settings</a>
+            <span class="version">v1.0</span>
+        </footer>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>
